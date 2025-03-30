@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "TABATA TIMMER",
+  title: "TABATA TIMER",
   description: "Tabata Timer creado por Emilioo24",
 };
 
