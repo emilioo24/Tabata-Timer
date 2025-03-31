@@ -24,6 +24,10 @@ export default function TabataTimer() {
     return () => clearInterval(timer);
   }, [isRunning, timeLeft, isWorkPhase, workTime, restTime]);
 
+  useEffect(() => {
+    document.title = `${formatTime(timeLeft)} - ${isWorkPhase ? "Work" : "Rest"}`;
+  }, [timeLeft, isWorkPhase]);
+
   const handleStart = () => {
     setIsRunning(true);
     setTimeLeft(isWorkPhase ? workTime : restTime);
